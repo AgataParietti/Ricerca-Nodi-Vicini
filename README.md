@@ -10,7 +10,7 @@ Per il funzionamento del programma è necessario avere:
 Prima di scaricare il contenuto di questa repository è necessario scaricare Apache Jena e Apache Jena Fuseki. Per il downolad cliccare [qui](https://jena.apache.org/download/) e dalla sezione **Apache Jena Binary Distributions** scaricare:
 - apache-jena-fuseki-4.7.0.zip
 - apache-jena-4.7.0.zip
-<br /> Saranno necessari entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file, cartelle (comprese quelle di Apache) nella stessa cartella, come mostrato in figura.
+<br /> Saranno necessari entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file, cartelle (comprese quelle di Apache) nella stessa cartella, come mostrato in figura.<br>
 ![](img/passo1.1.png?raw=true)
 
 ## Secondo step: settare il manifest.txt
