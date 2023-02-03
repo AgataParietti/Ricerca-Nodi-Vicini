@@ -34,7 +34,9 @@ jar umf manifest.txt fuseki-server.jar
  <br> 
  Per eseguire gli script python:
  1. Aprire il terminale nella cartella dove sono presenti i file python
- 2. Eseguire i file da terminale
+ 2. Eseguire i file da terminale e seguire le istruzioni che compariranno. Non eseguire lo script *kb_functions.py*
  ```
-jar umf manifest.txt fuseki-server.jar
-```
+ python te_embedding.py
+ python w2v_embedding.py 
+ ```
+Controllate che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
