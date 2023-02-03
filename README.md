@@ -13,8 +13,8 @@ Prima di scaricare il contenuto di questa repository è necessario scaricare Apa
 <br /> Saranno necessari entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file, cartelle (comprese quelle di Apache) nella stessa cartella, come mostrato in figura.
 ![](img/passo1.1.png?raw=true)
 
-## Secondo step: settare il manifest.txt
-Per poter far funzionare le funzioni che estendono SPAQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i seguenti step:
+## Secondo step: set del manifest.txt
+Per poter far funzionare le funzioni che estendono SPARQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i seguenti step:
 1. Aprire il file manifest.txt, che si presenterà come in figura:
 ![](img/manifest1.png?raw=true)
 2. Accanto a *Class-Path:* scrivere l'absolute path della cartella *functions_and_embeddings* ricordandosi il '/' finale, come in figura.
@@ -28,7 +28,7 @@ jar umf manifest.txt fuseki-server.jar
 5. Il terminale potrebbe restituire il seguente WARNING, in caso abbiate già svolto questo procedimento. Potete ignorarlo senza problemi.
 ![](img/manifest3.png?raw=true)
 
-## Terzo step: eseguire gli script python per effettuare l'embedding
+## Terzo step: effettuare l'embedding
  ***È importante per il funzionamento degli script python che il file contenente il dataset sia in formato turtle (.ttl)*** 
  <br> Questi script hanno il compito di creare, a partire dal file tutrte, due tipologie di embeddings e salvarle in due file CSV nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
  <br> 
@@ -54,3 +54,10 @@ Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo 
  2. Una volta creato il dataset cliccare su **add data** e poi *select files*. Selezionare il file turtle nella cartella dataset. Cliccare infine su *upload now* 
  ![](img/fuseki3.png?raw=true)
  3. Cliccare su query in alto a sinistra, sotto il nome del dataset.
+
+## Quinto step: quey e funzioni java
+Una volta sulla sezione query di Fuseki possiamo usare le funzioni implementate per fare la ricerca di nodi vicini. Le funzioni che estendono SPARQL sono due: **W2V* che implementa l'embedding Word To Vector e **TE** che implementa l'embedding TransE. Per i dettagli teorici leggere il pdf della relazione. <br>
+La query di base da usare per effettuare l'embedding è la seguente:
+'''sql
+ 
+ '''
