@@ -9,7 +9,7 @@ def save_embedding(model):
     df_elements = pd.DataFrame(model.wv.index_to_key, columns=['element'])
     df_all = pd.concat([df_elements, df_vectors], axis=1)
 
-    all_name = f'dataset/embedding_w2v.csv'
+    all_name = f'functions_and_embeddings/embedding_w2v.csv'
 
     df_all.to_csv(all_name, index=False)
 
