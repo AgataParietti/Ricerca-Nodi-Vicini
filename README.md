@@ -39,4 +39,18 @@ jar umf manifest.txt fuseki-server.jar
  python te_embedding.py
  python w2v_embedding.py 
  ```
-Controllate che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
+Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
+
+## Quarto step: aprire Fuseki e caricare il dataset
+Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella in cui sono salvate anche le due cartelle *apache-jena-fuseki-4.7.0* e *apache-jena-4.7.0* ed eseguire il seguente comando:
+```
+ apache-jena-fuseki-4.7.0/fuseki-server
+ ```
+ Il terminale dovrebbe restituire un output simile a quello in figura.
+  ![](img/fuseki1.png?raw=true)
+ Come è possibile vedere il server si apre sulla porta 3030, e quindi andare sul browser per entrare in localhost:3030. Apparirà la seguente schermata.
+ ![](img/fuseki2.png?raw=true)
+ 1. Cliccare su **add one** e poi inserire il nome del dataset e scegliere che tipo di dataset si vuole creare. Si consiglia di scegliere l'opzione *Persistent (TDB2)*
+ 2. Una volta creato il dataset cliccare su **add data** e poi *select files*. Selezionare il file turtle nella cartella dataset. Cliccare infine su *upload now* 
+ ![](img/fuseki3.png?raw=true)
+ 3. Cliccare su query in alto a sinistra, sotto il nome del dataset.
