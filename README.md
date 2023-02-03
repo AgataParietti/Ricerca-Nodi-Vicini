@@ -11,7 +11,6 @@ Prima di scaricare il contenuto di questa repository è necessario scaricare Apa
 - apache-jena-fuseki-4.7.0.zip
 - apache-jena-4.7.0.zip
 <br /> Saranno necessari entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file, cartelle (comprese quelle di Apache) nella stessa cartella, come mostrato in figura.
-<br>
 ![](img/passo1.1.png?raw=true)
 
 ## Secondo step: settare il manifest.txt
