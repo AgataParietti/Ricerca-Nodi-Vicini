@@ -25,7 +25,7 @@ def main():
     margin = 0.5
 
     # Load dataset
-    print('Inserire il nome del dataset. NOTA BENE: il filw deve trovarsi nella cartella dataset ed è necessario '
+    print('Inserire il nome del dataset. NOTA BENE: il file deve trovarsi nella cartella dataset ed è necessario '
           'che sia un file .ttl. Non inserire l\'estensione')
     file = input()
     data = kb.from_ttl_to_df('dataset/' + file + '.ttl')
