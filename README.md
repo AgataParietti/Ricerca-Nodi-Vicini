@@ -3,8 +3,8 @@ Implementazione embeddings per la ricerca di nodi vicini su Fuseki.
 
 ## Requisiti Software
 Per il funzionamento del programma è necessario avere:
-1. Python 3 e le librerie *pandas, random, gensim, pytorch, numpy, tqdm e torchkge*
-2. Java 11
+1. Python 3 e le librerie *pandas, random, gensim, pytorch, numpy, tqdm, cython e torchkge*
+2. Java 11 o superiore (testato con java 11)
 
 ## Primo step: set dei file
 Prima di scaricare il contenuto di questa repository è necessario scaricare Apache Jena e Apache Jena Fuseki. Per il downolad cliccare [qui](https://jena.apache.org/download/) e dalla sezione **Apache Jena Binary Distributions** scaricare:
@@ -30,4 +30,11 @@ jar umf manifest.txt fuseki-server.jar
 
 ## Terzo step: eseguire gli script python per effettuare l'embedding
  ***È importante per il funzionamento degli script python che il file contenente il dataset sia in formato turtle (.ttl)*** 
- <br /> Aprire il terminale nella cartella dove avete messo tutti 
+ <br> Questi script hanno il compito di creare, a partire dal file tutrte, due tipologie di embeddings e salvarle in due file CSV nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
+ <br> 
+ Per eseguire gli script python:
+ 1. Aprire il terminale nella cartella dove sono presenti i file python
+ 2. Eseguire i file da terminale
+ ```
+jar umf manifest.txt fuseki-server.jar
+```
