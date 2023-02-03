@@ -29,5 +29,5 @@ jar umf manifest.txt fuseki-server.jar
 ![](img/manifest3.png?raw=true)
 
 ## Terzo step: eseguire gli script python per effettuare l'embedding
- **È importante per il funzionamento degli script python che il file contenente il dataset sia in formato turtle (.ttl)*** 
+ ***È importante per il funzionamento degli script python che il file contenente il dataset sia in formato turtle (.ttl)*** 
  <br /> Aprire il terminale nella cartella dove avete messo tutti 
