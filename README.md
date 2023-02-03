@@ -20,9 +20,10 @@ Per poter far funzionare le funzioni che estendono SPAQL su Fuseki è necessario
 2. Accanto a *Class-Path:* scrivere l'absolute path della cartella *functions_and_embeddings* ricordandosi il '/' finale, come in figura.
 ![](img/manifest2.png?raw=true)
 ***NB*** E' molto importante lasciare una riga blank, come mostrato in figura!
-3. Spostare il file manifest.txt modificato nella cartella *apache-jena-fuseki-4.7.0* ed eseguire i seguenti comandi da terminale:
+3. Spostare il file manifest.txt modificato nella cartella *apache-jena-fuseki-4.7.0*, aprire il terminale ed entrare attraverso il comando *cd* nella cartella  *apache-jena-fuseki-4.7.0*.
+4. Eseguire ii seguente comando da terminale:
 ```
-git status
-git add
-git commit
+jar umf manifest.txt fuseki-server.jar
 ```
+5. Il terminale potrebbe restituire il seguente WARNING, in caso abbiate già svolto questo procedimento. Potete ignorarlo senza problemi.
+![](img/manifest3.png?raw=true)
