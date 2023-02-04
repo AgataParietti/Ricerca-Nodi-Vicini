@@ -10,7 +10,7 @@ Per il funzionamento del programma è necessario avere:
 Prima di scaricare il contenuto di questa repository è necessario scaricare Apache Jena e Apache Jena Fuseki. Per il downolad cliccare [qui](https://jena.apache.org/download/) e dalla sezione **Apache Jena Binary Distributions** scaricare:
 - apache-jena-fuseki-4.7.0.zip
 - apache-jena-4.7.0.zip
-<br /> Saranno necessari entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file, cartelle (comprese quelle di Apache) nella stessa cartella, come mostrato in figura.
+<br /> Saranno necessarie entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file e cartelle (comprese quelle di Apache) in un'unica cartella (nel nostro caso Nodi_Vicini), come mostrato in figura.
 ![](img/passo1.1.png?raw=true)
 
 ## Secondo step: set del manifest.txt
@@ -42,7 +42,7 @@ jar umf manifest.txt fuseki-server.jar
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
 
 ## Quarto step: aprire Fuseki e caricare il dataset
-Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella in cui sono salvate anche le due cartelle *apache-jena-fuseki-4.7.0* e *apache-jena-4.7.0* ed eseguire il seguente comando:
+Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale (*cd ...*) la cartella in cui sono salvate anche le due cartelle *apache-jena-fuseki-4.7.0* e *apache-jena-4.7.0* (nel nostro caso Nodi_Vicini) ed eseguire il seguente comando:
 ```
  apache-jena-fuseki-4.7.0/fuseki-server
  ```
@@ -57,7 +57,7 @@ Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo 
 
 ## Quinto step: quey e funzioni java
 Una volta sulla sezione query di Fuseki possiamo usare le funzioni implementate per fare la ricerca di nodi vicini. Le funzioni che estendono SPARQL sono due: **W2V** che implementa l'embedding Word To Vector e **TE** che implementa l'embedding TransE. Per i dettagli teorici leggere il pdf della relazione. <br>
-La query di base da usare per calcolare la distanza di i nodi con tutti gli altri nodi usando l'embedding Word To Vector è la seguente:
+La query di base da usare per calcolare la distanza di tutti i nodi con tutti gli altri nodi usando l'embedding Word To Vector è la seguente:
 ```
  PREFIX f: <java:>
  SELECT ?s1 ?s2 ?dist WHERE {
@@ -72,6 +72,6 @@ La query di base da usare per calcolare la distanza di i nodi con tutti gli altr
      BIND(f:W2V(?s1, ?s2) as ?dist)
  }
  ```
-Per il TransE sostituire *f:W2V* con *f:TE*. Se si hanno dataset grandi è possibile che l'esecuzione della query non sia immediata. Nella relazione sono riportati altri esempi di query.
+Se si vuole usare l'embedding TransE sostituire *f:W2V* con *f:TE*. Se si hanno dataset grandi è possibile che l'esecuzione della query non sia immediata. Nella relazione sono riportati altri esempi di query.
 
 ## Developed by [Agata Parietti](https://github.com/AgataParietti) and [Sofia Galante](https://github.com/Sofia-Galante)
