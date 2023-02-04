@@ -3,7 +3,7 @@ Implementazione embeddings per la ricerca di nodi vicini su Fuseki.
 
 ## Requisiti Software
 Per il funzionamento del programma è necessario avere:
-1. Python 3 e le librerie *pandas, random, gensim, pytorch, numpy, tqdm, cython e torchkge*
+1. Python 3 e le librerie *pandas, random, gensim, pytorch, numpy, csv, tqdm, cython e torchkge*
 2. Java 11 o superiore (testato con java 11)
 
 ## Primo step: set dei file
