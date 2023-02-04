@@ -74,4 +74,4 @@ SELECT ?s1 ?s2 ?dist WHERE {
  '''
 Per il TransE sostituire *f:W2V* con *f:TE*. Se si hanno dataset grandi è possibile che l'esecuzione della query non sia immediata. Nella relazione sono riportati altri esempi di query.
 
-## Developed by [Agata Parietti](https://github.com/AgataParietti) and [Sofia Galante](https://github.com/Sofia_Galante)
+## Developed by [Agata Parietti](https://github.com/AgataParietti) and [Sofia Galante](https://github.com/Sofia-Galante)
