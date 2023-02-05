@@ -16,8 +16,9 @@ Prima di scaricare il contenuto di questa repository è necessario scaricare Apa
 ## Secondo step: set del manifest.txt
 Per poter far funzionare le funzioni che estendono SPARQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i passaggi:
 
-1. Spostare il file manifest.txt nella cartella *apache-jena-fuseki-4.7.0*, aprire il terminale ed entrare attraverso il comando *cd* nella cartella  *apache-jena-fuseki-4.7.0*.
-2. Eseguire il seguente comando da terminale:
+1. Spostare il file manifest.txt nella cartella *apache-jena-fuseki-4.7.0*
+2. Aprire il terminale ed entrare attraverso il comando *cd* nella cartella  *apache-jena-fuseki-4.7.0*.
+3. Eseguire il seguente comando da terminale:
 ```
 jar umf manifest.txt fuseki-server.jar
 ```
