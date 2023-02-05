@@ -51,7 +51,7 @@ Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo 
 
 ## Quinto step: query e funzioni java
 Una volta sulla sezione query di Fuseki possiamo usare le funzioni implementate per fare la ricerca di nodi vicini. Le funzioni che estendono SPARQL sono due: **W2V** che implementa l'embedding Word2Vec e **TE** che implementa l'embedding TransE. Per i dettagli teorici leggere il pdf della relazione. <br>
-La query di base da usare per calcolare la distanza di tutti i nodi con tutti gli altri nodi usando l'embedding Word To Vector è la seguente:
+La query di base da usare per calcolare la distanza di tutti i nodi con tutti gli altri nodi usando l'embedding Word2Vec è la seguente:
 ```
  PREFIX f: <java:>
  SELECT ?s1 ?s2 ?dist WHERE {
