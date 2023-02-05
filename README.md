@@ -28,7 +28,7 @@ jar umf manifest.txt fuseki-server.jar
 ```
 5. Il terminale potrebbe restituire il seguente WARNING, in caso abbiate già svolto questo procedimento. Potete ignorarlo senza problemi.
 ![](img/manifest3.png?raw=true)
-###Per Windows
+### Per Windows
 ***Work in progress***
 
 ## Terzo step: effettuare l'embedding
