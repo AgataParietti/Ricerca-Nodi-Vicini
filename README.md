@@ -24,6 +24,7 @@ jar umf manifest.txt fuseki-server.jar
 ```
 
 ## Terzo step: effettuare l'embedding
+Nella cartella *dataset* in questa repository è già presente un dataset di esempio fornito da **Apache Jena** chiamato *cheeses.ttl*. Quindi nella cartella *functions_and_embeddings* sono già stati caricati gli embeddings d questo dataset. Nel caso se ne voglia aggiungere uno nuovo, inserire il file nella cartella *dataset* <br>
 Gli script python hanno il compito di creare, a partire dal file contenente il dataset, due tipologie di embeddings e salvarle in due file CSV nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
  <br> 
  Per eseguire gli script python:
