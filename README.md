@@ -14,22 +14,13 @@ Prima di scaricare il contenuto di questa repository è necessario scaricare Apa
 ![](img/passo1.1.png?raw=true)
 
 ## Secondo step: set del manifest.txt
-Per poter far funzionare le funzioni che estendono SPARQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i passaggi indicati a seconda del vostro Sistema Operativo.
-### Per sistemi Unix
-1. Aprire il file manifest.txt, che si presenterà come in figura:
-![](img/manifest1.png?raw=true)
-2. Accanto a *Class-Path:* scrivere l'absolute path della cartella *functions_and_embeddings* ricordandosi il '/' finale, come in figura.
-![](img/manifest2.png?raw=true)
-***NB*** E' molto importante lasciare una riga blank, come mostrato in figura!
-3. Spostare il file manifest.txt modificato nella cartella *apache-jena-fuseki-4.7.0*, aprire il terminale ed entrare attraverso il comando *cd* nella cartella  *apache-jena-fuseki-4.7.0*.
-4. Eseguire il seguente comando da terminale:
+Per poter far funzionare le funzioni che estendono SPARQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i passaggi:
+
+1. Spostare il file manifest.txt nella cartella *apache-jena-fuseki-4.7.0*, aprire il terminale ed entrare attraverso il comando *cd* nella cartella  *apache-jena-fuseki-4.7.0*.
+2. Eseguire il seguente comando da terminale:
 ```
 jar umf manifest.txt fuseki-server.jar
 ```
-5. Il terminale potrebbe restituire il seguente WARNING, in caso abbiate già svolto questo procedimento. Potete ignorarlo senza problemi.
-![](img/manifest3.png?raw=true)
-### Per Windows
-***Work in progress***
 
 ## Terzo step: effettuare l'embedding
 Gli script python hanno il compito di creare, a partire dal file contenente il dataset, due tipologie di embeddings e salvarle in due file CSV nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
