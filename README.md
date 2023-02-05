@@ -11,7 +11,7 @@ Prima di scaricare il contenuto di questa repository è necessario scaricare Apa
 - apache-jena-fuseki-4.7.0.zip
 - apache-jena-4.7.0.zip
 <br /> Saranno necessarie entrambe le cartella unzippate. Poi scaricare il contenuto della repository e mettere tutti i file e cartelle (comprese quelle di Apache) in un'unica cartella (nel nostro caso Nodi_Vicini), come mostrato in figura.
-![](img/passo1.1.png?raw=true)
+![](img/passo1.png?raw=true)
 
 ## Secondo step: set del manifest.txt
 Per poter far funzionare le funzioni che estendono SPARQL su Fuseki è necessario aggiungere i file .jar nel classpath del file .jar del server Fuseki. Quindi è molto importante seguire i passaggi:
