@@ -81,7 +81,7 @@ def main():
 
     df_all = pd.concat([total_df, total_emb], axis=1)
 
-    df_all.to_csv('functions_and_embeddings/embedding_transe.csv', index=False, quoting=csv.QUOTE_NONE, escapechar=",")
+    df_all.to_csv('functions_and_embeddings/embedding_transe.csv', index=False, header=False, quoting=csv.QUOTE_NONE, escapechar=",")
 
     
 
