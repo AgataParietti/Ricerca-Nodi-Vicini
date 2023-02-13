@@ -3,11 +3,12 @@ import pandas as pd
 import random
 import dataset_preparation
 from tqdm.autonotebook import tqdm
+import time
 import csv
 
 def from_df_to_phrases(df, n, d, reverse = False):
     sequences = list()
-    random.seed(2208)
+    random.seed(time.time())
     if reverse:
         col_1 = 'tail'
         col_2 = 'head'
@@ -49,7 +50,7 @@ def save_embedding(model):
 
     all_name = f'functions_and_embeddings/embedding_w2v.csv'
 
-    df_all.to_csv(all_name, index=False, quoting=csv.QUOTE_NONE, escapechar=",")
+    df_all.to_csv(all_name, index=False, header=False, quoting=csv.QUOTE_NONE, escapechar=",")
 
 def main():
     df = dataset_preparation.create_dataframe()
