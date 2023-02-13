@@ -37,9 +37,14 @@ Gli script python hanno il compito di creare, a partire dal file contenente il d
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
 
 ## Quarto step: aprire Fuseki e caricare il dataset
-Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella *apache-jena-fuseki-4.7.0 ed eseguire il seguente comando:
+Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella *apache-jena-fuseki-4.7.0* ed eseguire il seguente comando:
+1. su sistemi Unix
 ```
  ./fuseki-server
+ ```
+ 2. su sistemi Windows
+ ```
+ fuseki-server
  ```
  Il terminale dovrebbe restituire un output simile a quello in figura.
   ![](img/fuseki1.png?raw=true)
