@@ -38,11 +38,11 @@ Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/m
 
 ## Quarto step: aprire Fuseki e caricare il dataset
 Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella *apache-jena-fuseki-4.7.0* ed eseguire il seguente comando:
-1. su sistemi Unix
+- su sistemi Unix
 ```
  ./fuseki-server
  ```
- 2. su sistemi Windows
+ - su sistemi Windows
  ```
  fuseki-server
  ```
