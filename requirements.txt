@@ -1,0 +1,8 @@
+gensim==4.3.0
+numpy==1.24.1
+pandas==1.5.2
+rdflib==6.2.0
+SPARQLWrapper==2.0.0
+torch==1.13.1
+torchkge==0.17.5
+tqdm==4.64.1
