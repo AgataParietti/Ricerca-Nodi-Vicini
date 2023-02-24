@@ -38,7 +38,7 @@ Gli script python hanno il compito di creare, a partire dal file contenente il d
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
 
 ### Prendere dati da RDF Store
-È possibile anche ottenere i dati direttamente da un RDF Store. Di default è stato scelto di prendere tutte le triple del grafo *https://query.wikidata.org/sparql*, effettuando la query seguente: 
+È possibile anche ottenere i dati direttamente da un RDF Store. Si può quindi costruire un grafo a partire dai dati contenuti in una Knowledge Base eseguendo una **query CONSTRUCT**. Di default è stato scelto di prendere tutte le triple di *https://query.wikidata.org/sparql*, effettuando la query seguente: 
 ```
 CONSTRUCT {?s ?p ?o}
 
@@ -47,9 +47,9 @@ WHERE {
 }
 LIMIT 100000
  ```
-Il grafo e la query da eseguire possono essere scelti a piacere andando a modificare:
-- per il grafo il file *sparql.txt* 
-- per la query il file *query.txt*
+Il grafo costruito a partire dall'RDF Store può essere creato a piacere andando a modificare:
+- il file *sparql.txt* per la scelta della KB di partenza; 
+- il file *query.txt* per decidere i criteri di selezione delle triple.
 
 Successivamente si va a salvare gli embeddings dei nodi nei file *embedding_transe.csv* e *embedding_w2v.csv* nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
 <br>
