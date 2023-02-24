@@ -24,17 +24,21 @@ jar umf manifest.txt fuseki-server.jar
 ```
 
 ## Terzo step: effettuare l'embedding
+### Dataset salvato in locale
 Nella cartella *dataset* in questa repository è già presente un dataset di esempio fornito da **Apache Jena** chiamato *cheeses.ttl*. Quindi nella cartella *functions_and_embeddings* sono già stati caricati gli embeddings di questo dataset. Nel caso se ne voglia aggiungere uno nuovo, inserire il file nella cartella *dataset* ed eseguire gli script. <br>
 Gli script python hanno il compito di creare, a partire dal file contenente il dataset, due tipologie di embeddings e salvarle in due file CSV nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
  <br> 
  Per eseguire gli script python:
  1. Aprire il terminale nella cartella dove sono presenti i file python
- 2. Eseguire i file da terminale e seguire le istruzioni che compariranno. Non eseguire lo script *dataset_preparation.py*
+ 2. Eseguire i file da terminale, scegliere la prima opzione e seguire le istruzioni che compariranno. Non eseguire lo script *dataset_preparation.py*
  ```
  python te_embedding.py
  python w2v_embedding.py 
  ```
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
+
+### Prendere dati da RDF Store
+È possibile anche ottenere i dati direttamente da un RDF Store fornendo un default graph o un grafo specifico. Per fare  
 
 ## Quarto step: aprire Fuseki e caricare il dataset
 Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella *apache-jena-fuseki-4.7.0* ed eseguire il seguente comando:
