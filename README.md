@@ -38,7 +38,7 @@ Gli script python hanno il compito di creare, a partire dal file contenente il d
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
 
 ### Prendere dati da RDF Store
-È possibile anche ottenere i dati direttamente da un RDF Store fornendo un default graph o un grafo specifico. Di default è stato scelto di prendere tutte le triple del grafo *https://query.wikidata.org/sparql*, effettuando la query seguente: 
+È possibile anche ottenere i dati direttamente da un RDF Store. Di default è stato scelto di prendere tutte le triple del grafo *https://query.wikidata.org/sparql*, effettuando la query seguente: 
 ```
 CONSTRUCT {?s ?p ?o}
 
