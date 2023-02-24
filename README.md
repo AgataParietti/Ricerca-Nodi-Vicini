@@ -38,7 +38,29 @@ Gli script python hanno il compito di creare, a partire dal file contenente il d
 Controllare che nella cartella *functions_and_embeddings* siano stati aggiunti/modificati i due file *embedding_transe.csv* e *embedding_w2v.csv*
 
 ### Prendere dati da RDF Store
-È possibile anche ottenere i dati direttamente da un RDF Store fornendo un default graph o un grafo specifico. Per fare  
+È possibile anche ottenere i dati direttamente da un RDF Store fornendo un default graph o un grafo specifico. Di default è stato scelto di prendere tutte le triple del grafo *https://query.wikidata.org/sparql*, effettuando la query seguente: 
+```
+CONSTRUCT {?s ?p ?o}
+
+WHERE {
+?s ?p ?o
+}
+LIMIT 100000
+ ```
+Il garfo e la query da eseguire possono essere scelti a piacere andando a modificare:
+- per il grafo il file *sparql.txt* 
+- per la query il file *query.txt*
+<br>
+Successivamente si va a salvare gli embeddings dei nodi nei file *embedding_transe.csv* e *embedding_w2v.csv* nella cartella *functions_and_embeddings*. È importante che tali file CSV rimangano in questa directory per il funzionamento delle funzioni java su Fuseki. Nel caso in cui siano già presenti due file contenenti gli embeddings, questi verranno sovrascritti. Consigliamo, nel caso in cui non si vogliano perdere gli embeddings di un certo dataset, di fare delle copie di questi file in una cartella a parte.
+<br>
+Per eseguire gli script python:
+ 1. Aprire il terminale nella cartella dove sono presenti i file python
+ 2. Eseguire i file da terminale, scegliere la seconda opzione e seguire le istruzioni che compariranno. Non eseguire lo script *dataset_preparation.py*
+ ```
+ python te_embedding.py
+ python w2v_embedding.py 
+ ```
+ In questo caso, però, non si avranno dati da caricare su Fuseki, che necessita di un file salvato in locale per poter fare l'upload del dataset. Di conseguenza questa opzione è consigliabile se si vuole fare l'embedding di una Knowledge Base molto grande e, successivamente, lavorare su Fuseki con un sottoinsieme di dati per la ricerca di nodi vicini. Tale sottoinsieme occuperà uno spazio minore in memoria rispetto alla KB, ma avendo gli embeddings di tutti i nodi è possibile lavorare con informazioni complete, che tengono conto di tutte le triple processate. 
 
 ## Quarto step: aprire Fuseki e caricare il dataset
 Una volta preparati gli embeddings è necessario aprire Fuseki. Per fare questo aprire da terminale la cartella *apache-jena-fuseki-4.7.0* ed eseguire il seguente comando:
